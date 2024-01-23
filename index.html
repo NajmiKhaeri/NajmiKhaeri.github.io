@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .header-content,
+        .section-content,
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            background-color: #333;
+        }
+
+        .menu-toggle {
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            color: #fff;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin: 0;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #fff;
+            padding: 15px;
+            display: block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            list-style-type: none;
+            position: absolute;
+            background-color: #333;
+            z-index: 1;
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .section {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .project,
+        .sample {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .sample img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .footer-content a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Media Query for Responsive Design */
+        @media screen and (max-width: 768px) {
+            .nav-list {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .nav-link {
+                display: block;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .dropdown-menu {
+                position: relative;
+                width: 100%;
+            }
+        }
+
+        .ellipsis {
+            display: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 768px) {
+            .ellipsis {
+                display: block;
+            }
+
+            .nav-list.collapsed {
+                display: none;
+            }
+        }
+    </style>
+    <title>Portofolio Copywriter</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Nama Anda</h1>
+            <p>Copywriter Profesional</p>
+        </div>
+    </header>
+
+    <nav id="nav-menu" class="nav-menu">
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <div class="ellipsis" id="ellipsis">...</div>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#" class="nav-link">Beranda</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Tentang Saya</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#about">Visi Misi</a></li>
+                    <li><a href="#clients">Klien</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link">Pengalaman</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#experience">Pendidikan</a></li>
+                    <li><a href="#projects">Proyek</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#samples" class="nav-link">Contoh Artikel</a>
+            </li>
+            <li class="nav-item">
+                <a href="#skills" class="nav-link">Keterampilan</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="about" class="section">
+        <div class="section-content">
+            <h2>Tentang Saya</h2>
+            <p>Deskripsi tentang diri Anda...</p>
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <div class="section-content">
+            <h2>Pengalaman</h2>
+            <div class="project">
+                <h3>Pendidikan</h3>
+                <p>Deskripsi pendidikan Anda...</p>
+            </div>
+            <div class="project">
+                <h3>Proyek</h3>
+                <p>Deskripsi proyek Anda...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="samples" class="section">
+        <div class="section-content">
+            <h2>Contoh Artikel</h2>
+            <div class="sample">
+                <img src="sample1.jpg" alt="Contoh Artikel 1">
+                <img src="sample2.jpg" alt="Contoh Artikel 2">
+                <img src="sample3.jpg" alt="Contoh Artikel 3">
+                <img src="sample4.jpg" alt="Contoh Artikel 4">
+                <p>Deskripsi artikel dan proyek terkait...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="section-content">
+            <h2>Keterampilan</h2>
+            <ul>
+                <li>Kemampuan Penulisan Kreatif</li>
+                <li>SEO Copywriting</li>
+                <!-- Tambahkan keterampilan lainnya -->
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>Hubungi saya di <a href="mailto:email@example.com">email@example.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/nama-anda">linkedin.com/in/nama-anda</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            var navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('show');
+            var navList = document.querySelector('.nav-list');
+            navList.classList.toggle('collapsed');
+        });
+
+        document.getElementById('ellipsis').addEventListener('click', function () {
+            var navList = document.querySelector('.nav-list');
+            navList.classList.toggle('collapsed');
+        });
+
+        var dropdowns = document.querySelectorAll('.dropdown');
+        dropdowns.forEach(function (dropdown) {
+            dropdown.addEventListener('click', function () {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
